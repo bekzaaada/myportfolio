@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -39,14 +40,14 @@ p{
     letter-spacing: .2rem;   
 }
 .section-title span{
-    color: rgb(163, 76, 221);
+    color: rgb(221, 125, 15);
 }
 .btn{
     display: inline-block;
     padding: 10px, 30px;
     color: white;
     background-color: transparent;
-    border: 2px solid rgb(163, 76, 221);
+    border: 2px solid rgb(221, 125, 15);
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -56,7 +57,7 @@ p{
 }
 .btn:hover{
     color: white;
-    background-color: rgb(163, 76, 221);
+    background-color: rgb(221, 125, 15);
 }
 .brand h1{
     font-size: 3rem;
@@ -65,7 +66,7 @@ p{
 
 }
 .brand h1 span{
-    color: rgb(163, 76, 221);
+    color: rgb(221, 125, 15);
 }
 
 /* header section */
@@ -137,7 +138,7 @@ p{
     letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: rgb(163, 76, 221);
+	color: rgb(221, 158, 76);
 }
 
 #header .hamburger{
@@ -197,7 +198,7 @@ p{
 }
 /* hero section*/
 #hero{
-    background-image: url(https://www.anypics.ru/download.php?file=201211/1920x1200/anypics.ru-37469.jpg);
+    background-image: url(https://images.unsplash.com/photo-1639402479828-78bb0b67698d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -217,7 +218,7 @@ p{
 #hero .hero{
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 50px;
+    padding-left: 100px;
     justify-content: flex-start;
 }
 #hero h1{
@@ -245,7 +246,7 @@ p{
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: rgb(163, 76, 221);
+    background-color: rgb(221, 125, 15);
     animation: text_reveal_box 1s ease;
     animation-delay: .3s;
 }
@@ -257,6 +258,10 @@ p{
 }
 #hero h1:nth-child(3) span{
     animation-delay: 2.5s ;
+}
+#hero a{
+    text-align: center;
+    margin-left: 400px;
 }
 
 /*services section */
@@ -272,9 +277,42 @@ p{
     margin: 0 auto;
 
 }
+.photos {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*.photos  .person{
+    box-shadow: 0px 0px 20px 0 , black;
+    transition: .3s ease box-shadow;
+}*/
+.photos  .person img{
+    width: 100%;
+    width: 350px;
+    height: 450px;
+    padding-right: 14px 14px;
+  
+  
+  box-shadow: 3px 3px 1px #ccc;
+  
+    
+}
+
+.photos  .person h3{
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 15px;
+    color: white;
+    height: 50px;
+    padding: 8px;
+    /*border: 2px solid black;*/
+    background-color: rgb(199, 117, 23);
+    /*border-radius: 30px;*/
+}
 #services .service-top p{
     color: black;
     font-size: 5rem;
+    
 }
 #services .service-top p{
     font-size: 1.4rem;
@@ -307,10 +345,18 @@ p{
     z-index: 1;
     overflow: hidden;
 }
+#services .service-item h3{
+    font-size: 1.8rem;
+    
+    color: black;
+    background-color: rgb(199, 117, 23);
+    border-radius: 15px;
+    padding: 7px;
+}
 #services .service-item::after{
     content: '';
     position: absolute;
-    background-image: linear-gradient(60deg, #4c545e 0%, #2b2c2e 100%);
+    background-image: linear-gradient(60deg, #1a1e24 0%, #1e2127 100%);
     opacity: .9;
     left: 0;
     height: 100%;
@@ -328,13 +374,14 @@ p{
     object-fit: cover;   
 } */
 #services .service-item h2{
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 #services .service-item p{
     color: white;
+    font-size: 2rem;
 }
 
 
@@ -342,8 +389,10 @@ p{
 #projects .projects{
     flex-direction: row;
     max-width: 1200px;
+    max-height: 600px;
     margin:0 auto;
     padding: 100px 0;
+    background-color: #0a1429;
 }
 #projects  .projects-header h1{
     margin-bottom: 3px;
@@ -351,69 +400,42 @@ p{
 #projects .projects-header p{
     color: black;
 }
-#projects .all-projects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+
+#projects  h1{
+    text-align: center;
+    color: black;
+    
+
 }
-#projects .project-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-#projects .project-info{
-    padding: 30px;
-    flex-basis: 50%;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(35, 40, 53);
+#projects .goal h1{
     color: white;
-}
-#projects .project-info h1{
-    font-size: 4rem;
-    font-weight: 300;
-}
-#projects .project-info h2{
-    font-size: 1.8rem;
-    font-size: 300;
-    margin-top: 3px;
-}
-#projects .project-info p{
-    color: white;
-    margin-top: 10px;
-}
-#projects .project-img{
-    flex-basis: 50%;
-    height: 300px;
-    overflow: hidden;
     position: relative;
+    text-align: start;
+    padding-left: 30px;
+    font-size: 4.5rem;
 }
-#projects .project-img:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(35, 40, 53);
-    opacity: 0.7;
+#projects .goal h2{
+    color: black;
+    font-size: 2rem;
+    background-color: white;
+    padding-left: 150px;
 }
-#projects .project-img img{
-    transition: 0.3s ease transform;
+#projects .user h1{
+    color: white;
+    position: relative;
+    text-align: start;
+    padding-left: 30px;
+    font-size: 4.5rem;
 }
-#projects .project-item:hover .project-img img{
-    transform: scale(1.1);
+#projects .user h2{
+    color: black;
+    font-size: 2rem;
+    background-color: white;
+    padding-left: 150px;
 }
+
+
 
 
 /* about section*/
@@ -428,6 +450,11 @@ p{
 #about .col-right{
     width: 100%;
 }
+
+#about .col-right h1{
+    margin-left: 420px;
+}
+
 #about .col-left{
     width: 250px;
     height: 360px;
@@ -446,76 +473,42 @@ p{
     color: black;
     margin-bottom: 20px;
 }
+#about .col-right h2{
+    margin-top: 50px;
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+#about .col-right a{
+    margin-left: 400px;
+    
+}
+
+.col-right .tech-items{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.tech-items .tech-item{
+    width: 150px;
+    height: 150px;
+}
 #about .col-right .btn{
     color: black;
     margin-bottom: 50px;
-    padding: 0px 7px;
+    padding: 10px;
     font-size: 2rem;
+    font-weight: bold;
 
 }
-#about .col-left .about-img{
-    margin-bottom: 30px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    border: 10px solid white;
-}
-#about .col-left .about-img::after{
-    content: '';
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid rgb(163, 76, 221);
-    z-index: -1;
-    margin-bottom: 40px;
-}
-/* contact section*/
-#contact .contact{
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-#contact .contact-items{
-    width: 450px;
-}
-#contact .contact-item{
-    width: 80%;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 30px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0px 0px 18px 0 #0000002c;
-    transition: .3s ease box-shadow;
-}
-#contact .contact-item:hover{
-    box-shadow: 0px 0px 8px 0 #0000002c;
-}
-#contact .icon{
-    width: 50px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-#contact .contact-info h1{
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-#contact .contact-info h2{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 500;
-}
+
 
 /* footer section*/
 #footer{
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #0a1429 0%, #1f2933 100%);
 }
 #footer .footer{
     min-height: 200px;
@@ -623,17 +616,7 @@ p{
     #about .about{
         flex-direction: column;
     }
-    #about .col-left{
-        width: 600px;
-        height: 400px;
-        padding-left: 60px;
-    }
-    #about .about .col-left .about-img::after{
-        left: -45px;
-        top: 34px;
-        height: 98%;
-        border:10px solid rgb(163, 76, 221);
-    }
+    
     #about .col-right{
         text-align: left;
         padding: 30px;
